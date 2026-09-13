@@ -40,7 +40,7 @@ FROM
 GROUP BY 
 	"Product Name", Category
 ORDER BY
-	"Total Profit" DESC
+	"Total Profit" DESC;
 
 /*
  The product that generated the highest profit was "WWI Desktop PC2.33 X2330 Black"
@@ -49,4 +49,15 @@ ORDER BY
  
  
  
+SELECT 
+	"Product Name",
+	SUM(Quantity) AS "Quantity sold"
+FROM
+	sales_analysis
+GROUP BY 
+	"Product Name"
+ORDER BY 
+	"Quantity sold" DESC;
+
+ -- Products by quantity sold
  

@@ -8,9 +8,7 @@ SELECT
 	CAST(REPLACE(REPLACE("Unit Cost USD", "$",""), ",","") AS DECIMAL) AS "Unit Cost USD",
 	CAST(REPLACE(REPLACE("Unit Price USD", "$",""), ",","") - REPLACE(REPLACE("Unit Cost USD", "$",""), ",","") AS DECIMAL) AS "Gross Profit USD",
 	p.Category,
-	p."Product Name",
-	p."Unit Price USD",
-	p."Unit Cost USD"
+	p."Product Name"
 FROM 
 	sales s
 LEFT JOIN 

@@ -15,13 +15,13 @@ FROM
 	sales s
 LEFT JOIN 
 	products p
-ON s.ProductKey = p.ProductKey
+ON s.ProductKey = p.ProductKey;
 
 
 SELECT 
 	SUM(Quantity * "Unit Price USD") AS "Total Revenue"
 FROM 
-	sales_analysis
+	sales_analysis;
 
 -- Total Revenue : $55,755,479.59 
 
@@ -29,7 +29,7 @@ FROM
 SELECT 
 	SUM("Gross Profit USD") AS "Total Profit"
 FROM 
-	sales_analysis
+	sales_analysis;
 
 -- Total Profit: $10,332,899.86	
 	
@@ -43,7 +43,7 @@ FROM
 GROUP BY 
 	Category
 ORDER BY 
-	"Total Revenue" DESC
+	"Total Revenue" DESC;
 
 /*
  The product category that generated the highest revenue was 
@@ -56,7 +56,7 @@ SELECT
 AS 
 	"Overall Profit Margin"
 FROM
-	sales_analysis
+	sales_analysis;
 
 -- Overall Profit Margin: 18.53%
 
@@ -71,7 +71,7 @@ FROM
 	sales_analysis
 ORDER BY 
 	"Total Profit USD" DESC
-LIMIT 10
+LIMIT 10;
 	
 /* 
 The order number that generated the highest profit was 433005 with 21397.7$ total profit 
@@ -89,7 +89,7 @@ FROM
 GROUP BY 
 	Category
 ORDER BY 
-	"Total Profit USD" DESC
+	"Total Profit USD" DESC;
 	
 /* 
 The product category which generated the highest profit was Computers,
@@ -107,7 +107,7 @@ FROM
 GROUP BY 
 	Category, Year
 ORDER BY 
-	Year ASC, "Total Profit USD" ASC
+	Year ASC, "Total Profit USD" ASC;
 
 -- Analysis of total profit by year and category
 
@@ -120,11 +120,11 @@ CREATE TEMP TABLE order_summary AS
         COUNT(*) AS "Total Line Items",
         SUM(Quantity * "Gross Profit USD") AS "Total Profit USD"
     FROM sales_analysis
-    GROUP BY "Order Number"
+    GROUP BY "Order Number";
 
 
 SELECT * FROM order_summary
-ORDER BY "Total Line Item" DESC
+ORDER BY "Total Line Item" DESC;
 
 -- Summarizes each order by total line items and total profit
 
@@ -156,7 +156,7 @@ AS
 FROM 
 	sales_analysis
 GROUP BY 
-	Category
+	Category;
 
 -- Profit Margin by Category = Total Profit / Total Revenue × 100 
 

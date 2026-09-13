@@ -1,8 +1,23 @@
+SELECT 
+    "Product Name",
+    SUM(Quantity * "Unit Price USD") AS "Total Revenue"
+FROM 
+	sales_analysis
+GROUP BY 
+	"Product Name"
+ORDER BY 
+	"Total Revenue" DESC
+LIMIT 10;
+
+
+-- Top 10 products by revenue
+
+
+
 
 SELECT 
     "Product Name",
-    SUM(Quantity * "Unit Price USD") AS "Total Revenue",
-    SUM(Quantity * "Unit Price USD"-"Unit Cost USD") AS "Total Profit"
+    SUM(Quantity * ("Unit Price USD" - "Unit Cost USD")) AS "Total Profit"
 FROM 
 	sales_analysis
 GROUP BY 
@@ -19,16 +34,16 @@ LIMIT 10;
 SELECT 
 	"Product Name",
 	Category,
-	SUM(Quantity * "Unit Price USD") AS "Total Revenue"
+	SUM(Quantity * ("Unit Price USD" - "Unit Cost USD")) AS "Total Profit"
 FROM
 	sales_analysis
 GROUP BY 
 	"Product Name", Category
 ORDER BY
-	"Total Revenue" DESC
+	"Total Profit" DESC
 
 /*
- The product that generated the highest revenue was "WWI Desktop PC2.33 X2330 Black"
+ The product that generated the highest profit was "WWI Desktop PC2.33 X2330 Black"
  whose category is "Computers"
  */
  

@@ -135,16 +135,24 @@ The dashboard focuses on:
 
 Interactive filters allow users to explore the data by relevant dimensions such as year and category.
 
+
 ### Dashboard Preview
 
-![Power BI Dashboard](screenshots/dashboard.png)
+#### Overview
+![Dashboard Overview](screenshots/dashboard_overview.png)
 
----
+#### Category Analysis
+![Category Analysis](screenshots/category_analysis.png)
+
+#### Store Analysis
+![Store Analysis](screenshots/store_analysis.png)
+
+
 
 ## Key Findings
 
-- Total revenue generated was **$43.21M**.
-- **Computers** generated the highest total revenue, with approximately **$16.08M**.
+- Total revenue generated was **$55.76M**.
+- **Computers** generated the highest total revenue, with approximately **$19.3M**.
 - **Computers** also generated the highest total profit, with approximately **$11.28M**.
 - The analysis showed that revenue was not directly proportional to quantity sold, indicating differences in average selling prices across categories.
 - Average Order Value was calculated at the order level to evaluate the average revenue generated per order.
@@ -188,7 +196,7 @@ Global-Electronics-Retail-Analytics/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-
+```
 
 ## Skills Demonstrated
 

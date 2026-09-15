@@ -55,7 +55,6 @@ LIMIT 10;
 
 
 SELECT 
-	CustomerKey,
 	ROUND(SUM(Quantity * "Unit price USD")/COUNT(DISTINCT CustomerKey),2) AS "Average Revenue per Customer"
 FROM 
 	sales_analysis

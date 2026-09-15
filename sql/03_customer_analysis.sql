@@ -19,7 +19,7 @@ ON
 	o.CustomerKey = c.CustomerKey
 LIMIT 10;
 	
--- Top 10 customers who had the highest number of orders
+-- Top 10 customers who had the highest number of orders.
 
 
 
@@ -50,7 +50,7 @@ ON c.CustomerKey = s.CustomerKey
 LIMIT 10;
 	
 	
--- Top 10 customers with the highest total revenue
+-- Top 10 customers with the highest total revenue.
 
 
 
@@ -61,6 +61,6 @@ FROM
 ORDER BY
 	"Average Revenue per Customer";
 	
--- Average revenue per customer
+-- Average revenue per customer.
 
 

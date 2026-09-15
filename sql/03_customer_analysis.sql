@@ -34,7 +34,7 @@ SELECT
 FROM 
 	(SELECT 
 		CustomerKey,
-		COUNT("Order Number") AS " Number of Orders",
+		COUNT(DISTINCT "Order Number") AS "Number of Orders",
 		SUM(Quantity * "Gross Profit USD") AS "Total Revenue"
 	FROM 
 		sales_analysis
@@ -49,13 +49,14 @@ LEFT JOIN sales_analysis s
 ON c.CustomerKey = s.CustomerKey
 LIMIT 10;
 	
+	
 -- Top 10 customers with the highest total revenue
 
 
 
 SELECT 
 	CustomerKey,
-	ROUND(SUM(Quantity * "Unit price USD")/COUNT(DISTINCT CustomerKey),2) as "Average Revenue per Customer"
+	ROUND(SUM(Quantity * "Unit price USD")/COUNT(DISTINCT CustomerKey),2) AS "Average Revenue per Customer"
 FROM 
 	sales_analysis
 ORDER BY

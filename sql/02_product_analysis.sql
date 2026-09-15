@@ -17,7 +17,7 @@ LIMIT 10;
 
 SELECT 
     "Product Name",
-    SUM(Quantity * ("Unit Price USD" - "Unit Cost USD")) AS "Total Profit"
+    SUM(Quantity * "Gross Profit USD") AS "Total Profit"
 FROM 
 	sales_analysis
 GROUP BY 
@@ -34,7 +34,7 @@ LIMIT 10;
 SELECT 
 	"Product Name",
 	Category,
-	SUM(Quantity * ("Unit Price USD" - "Unit Cost USD")) AS "Total Profit"
+	SUM(Quantity * "Gross Profit USD") AS "Total Profit"
 FROM
 	sales_analysis
 GROUP BY 

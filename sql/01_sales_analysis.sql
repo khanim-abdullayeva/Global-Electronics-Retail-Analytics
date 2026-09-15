@@ -25,11 +25,11 @@ FROM
 
 
 SELECT 
-	SUM("Gross Profit USD") AS "Total Profit"
+	SUM(Quantity * "Gross Profit USD") AS "Total Profit"
 FROM 
 	sales_analysis;
 
--- Total Profit: $10,332,899.86	
+-- Total Profit: $32,662,688.38	
 	
 	
 	
@@ -50,13 +50,13 @@ ORDER BY
 
 
 SELECT 
-	ROUND((SUM("Gross Profit USD")/ SUM("Quantity" * "Unit Price USD"))*100,2)
+	ROUND((SUM(Quantity * "Gross Profit USD")/ SUM("Quantity" * "Unit Price USD"))*100,2)
 AS 
 	"Overall Profit Margin"
 FROM
 	sales_analysis;
 
--- Overall Profit Margin: 18.53%
+-- Overall Profit Margin: 58.58%
 
 
 
@@ -122,7 +122,7 @@ CREATE TEMP TABLE order_summary AS
 
 
 SELECT * FROM order_summary
-ORDER BY "Total Line Item" DESC;
+ORDER BY "Total Line Items" DESC;
 
 -- Summarizes each order by total line items and total profit
 
@@ -148,7 +148,7 @@ ORDER BY
 
 SELECT 
 	Category, 
-	ROUND(SUM(Quantity * ("Unit Price USD" - "Unit Cost USD"))/ SUM(Quantity * "Unit Price USD") *100,2) 
+	ROUND(SUM(Quantity * "Gross Profit USD")/ SUM(Quantity * "Unit Price USD") *100,2) 
 AS 
 	"Profit Margin by Category"
 FROM 
@@ -199,6 +199,7 @@ FROM
 	order_sales;
 
 -- Calculates the average revenue generated per order
+
 
 
 

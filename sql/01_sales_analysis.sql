@@ -91,7 +91,7 @@ ORDER BY
 	
 /* 
 The product category which generated the highest profit was Computers,
-with 11,277,447.9$ in total
+with 11,277,447.9$ in total.
 */
 
 
@@ -107,7 +107,7 @@ GROUP BY
 ORDER BY 
 	Year ASC, "Total Profit USD" ASC;
 
--- Analysis of total profit by year and category
+-- Analysis of total profit by year and category.
 
 
 
@@ -124,7 +124,7 @@ CREATE TEMP TABLE order_summary AS
 SELECT * FROM order_summary
 ORDER BY "Total Line Items" DESC;
 
--- Summarizes each order by total line items and total profit
+-- Summarizes each order by total line items and total profit.
 
 
 
@@ -198,7 +198,7 @@ AS
 FROM 
 	order_sales;
 
--- Calculates the average revenue generated per order
+-- Calculates the average revenue generated per order.
 
 
 

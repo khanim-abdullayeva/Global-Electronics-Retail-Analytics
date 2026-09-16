@@ -29,7 +29,7 @@ SELECT
 FROM 
 	sales_analysis;
 
--- Total Profit: $32,662,688.38	
+-- Total Profit : $32,662,688.38	
 	
 	
 	
@@ -45,7 +45,7 @@ ORDER BY
 
 /*
  The product category that generated the highest revenue was 
- Computers, with $19,301,595.46 in total
+ Computers, with $19,301,595.46 in total.
 */
 
 

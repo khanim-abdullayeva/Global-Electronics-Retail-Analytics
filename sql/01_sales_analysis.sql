@@ -56,7 +56,7 @@ AS
 FROM
 	sales_analysis;
 
--- Overall Profit Margin: 58.58%
+-- Overall Profit Margin : 58.58%
 
 
 
@@ -73,7 +73,7 @@ LIMIT 10;
 	
 /* 
 The order number that generated the highest profit was 433005 with 21397.7$ total profit 
-and the category of this product was Home Apliances
+and the category of this product was Home Apliances.
 */
 
 

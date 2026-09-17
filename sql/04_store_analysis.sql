@@ -37,6 +37,6 @@ ON
 ORDER BY
 	"Total Profit" DESC;
 	
--- Total Profit by Store
+-- Total Profit by Store.
 
 

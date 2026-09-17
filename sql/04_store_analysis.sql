@@ -16,7 +16,7 @@ ON
 ORDER BY
 	"Total Revenue" DESC;
 	
--- Total Revenue by Store
+-- Total Revenue by Store.
 
 
 SELECT 

@@ -10,7 +10,7 @@ ORDER BY
 LIMIT 10;
 
 
--- Top 10 products by revenue
+-- Top 10 products by revenue.
 
 
 
@@ -44,7 +44,7 @@ ORDER BY
 
 /*
  The product that generated the highest profit was "WWI Desktop PC2.33 X2330 Black"
- whose category is "Computers"
+ whose category is "Computers".
  */
  
  

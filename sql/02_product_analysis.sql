@@ -59,5 +59,5 @@ GROUP BY
 ORDER BY 
 	"Quantity sold" DESC;
 
- -- Products by quantity sold
+ -- Products by quantity sold.
  
